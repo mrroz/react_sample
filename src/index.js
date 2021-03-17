@@ -1,11 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-
-const elemnt = React.createElement(
-    'div', { id: 'main', className: 'container' },
-    "hello mortzasa !"
-
-)
+import App from './app';
 
 
-ReactDOM.render(elemnt, document.getElementById('root'))
+ReactDOM.render( < App / > , document.getElementById('root'))
