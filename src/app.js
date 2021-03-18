@@ -1,10 +1,15 @@
 import React from 'react';
+import Intro from './components/product/products'
 
 const App = () => {
-    return React.createElement(
-        'div', { id: 'main', className: 'container' },
-        "hello mortzasa22222 !"
-
+    return (
+    <div className="className" id="container">
+        <h1>
+            hello morteza
+        </h1>
+        <Intro/>
+    </div>
+        
     )
 }
 
