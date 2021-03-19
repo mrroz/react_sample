@@ -5,8 +5,9 @@ return(
     <div className="intro">
 
          <p>welcome {props.name}</p> 
-         <p>welcome {props.age}</p> 
-         <h1>{props.children}</h1>
+         <p onClick={props.click}>welcome {props.age}</p> 
+         <h1 onClick={props.show}>{props.children}</h1>
+         <input type="text" className="sing" onChange={props.input}/>
          </div>
 )
 

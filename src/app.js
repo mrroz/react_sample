@@ -6,9 +6,9 @@ import './app.css'
 class App extends React.Component{
     state={
         products:[
-            {name :"ali" , age:25},
-            {name :"mori" , age:26},
-            {name :"saeed" , age:35},
+            {name :"ali" , age:5},
+            {name :"mori" , age:3},
+            {name :"saeed" , age:2},
         ]
     }
 
@@ -22,6 +22,21 @@ class App extends React.Component{
        })
 
     }
+    show = ()=>{
+        console.log("salammmm")
+    }
+
+    inputHandler=(event)=>{
+        this.setState({
+            products:[
+                {name :event.target.value, age:100},
+                {name :event.target.value , age:250},
+                {name :event.target.value , age:350},
+            ]
+
+
+        })
+    }
 
     render(){
         return (
@@ -30,14 +45,18 @@ class App extends React.Component{
                 <Intro 
                  name={this.state.products[1].name}
                  age={this.state.products[1].age}
+                 input={this.inputHandler}
                  /> 
                    <Intro 
                  name={this.state.products[1].name}
                  age={this.state.products[1].age}
+                 hiiiii
+                 print={this.show}
                  /> 
                    <Intro 
                  name={this.state.products[2].name}
                  age={this.state.products[2].age}
+                 click={this.changeVarHandler}
                  /> 
                
                 <button onClick={this.changeVarHandler} >change age</button>
