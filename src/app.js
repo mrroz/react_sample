@@ -9,7 +9,8 @@ class App extends React.Component{
             {name :"ali" , age:5},
             {name :"mori" , age:3},
             {name :"saeed" , age:2},
-        ]
+        ],
+        showState:false
     }
 
     changeVarHandler= () => {
@@ -33,21 +34,28 @@ class App extends React.Component{
                 {name :event.target.value , age:250},
                 {name :event.target.value , age:350},
             ]
-
-
         })
+    }
+
+    showList = ()=> {
+//   const show = this.state.show,
+const ss = this.state.showState
+  this.setState({
+      showState: !ss,
+     
+  })
+  console.log('klicc')
     }
 
     render(){
         
-      
-
-
-        
         return (
             <div className="info" >
                 <h1>hello morteza </h1>
-                <Intro 
+                          
+              <button   onClick={this.showList}  className='btn'>change age</button>
+               { this.state.showState?( <div>
+               <Intro 
                  name={this.state.products[1].name}
                  age={this.state.products[1].age}
                  input={this.inputHandler}
@@ -63,9 +71,9 @@ class App extends React.Component{
                  age={this.state.products[2].age}
                  click={this.changeVarHandler}
                  /> 
-               
-             {/* style={btnStyle} */}
-              <button   onClick={this.changeVarHandler}  className='btn'>change age</button>
+               </div>):null
+    }
+
             </div>
                 
             )
