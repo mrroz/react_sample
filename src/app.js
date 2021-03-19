@@ -39,6 +39,11 @@ class App extends React.Component{
     }
 
     render(){
+        
+      
+
+
+        
         return (
             <div className="info" >
                 <h1>hello morteza </h1>
@@ -50,8 +55,8 @@ class App extends React.Component{
                    <Intro 
                  name={this.state.products[1].name}
                  age={this.state.products[1].age}
-                 hiiiii
-                 print={this.show}
+                
+                 
                  /> 
                    <Intro 
                  name={this.state.products[2].name}
@@ -59,7 +64,8 @@ class App extends React.Component{
                  click={this.changeVarHandler}
                  /> 
                
-                <button onClick={this.changeVarHandler} >change age</button>
+             {/* style={btnStyle} */}
+              <button   onClick={this.changeVarHandler}  className='btn'>change age</button>
             </div>
                 
             )

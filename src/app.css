@@ -3,3 +3,15 @@
     margin: 5%;
     background: rgb(247, 242, 224);
 }
+
+.btn {
+    background-color: darkmagenta;
+    color: white;
+    border: none;
+    width: 20%;
+    height: 10%;
+    padding: 2%;
+    margin: 45px 45px 45px 45px;
+    border-radius: 15%;
+    outline: rgb(192, 25, 25);
+}
