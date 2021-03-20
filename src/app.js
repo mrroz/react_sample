@@ -6,7 +6,7 @@ import './app.css'
 class App extends React.Component{
     state={
         products:[
-            {name :"ali" , age:5},
+            {name :"alics" , age:5},
             {name :"mori" , age:3},
             {name :"saeed" , age:2},
         ],
@@ -42,37 +42,47 @@ class App extends React.Component{
 const ss = this.state.showState
   this.setState({
       showState: !ss,
-     
   })
   console.log('klicc')
     }
 
+   
+
     render(){
+
+        let produt=null
+        if(this.state.showState){
+            produt=(
+                <div>
+               {
+
+               this.state.products.map((item)=>{
+
+                return(
+                    <Intro name={item.name} age={item.age} input={this.inputHandler} />
+                )
+
+               })
+
+               }
+                </div>
+    
+
+            )
+        }
+
+
+
+
         
         return (
             <div className="info" >
                 <h1>hello morteza </h1>
                           
               <button   onClick={this.showList}  className='btn'>change age</button>
-               { this.state.showState?( <div>
-               <Intro 
-                 name={this.state.products[1].name}
-                 age={this.state.products[1].age}
-                 input={this.inputHandler}
-                 /> 
-                   <Intro 
-                 name={this.state.products[1].name}
-                 age={this.state.products[1].age}
-                
-                 
-                 /> 
-                   <Intro 
-                 name={this.state.products[2].name}
-                 age={this.state.products[2].age}
-                 click={this.changeVarHandler}
-                 /> 
-               </div>):null
-    }
+               
+             {produt}
+                  
 
             </div>
                 
