@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+dynamic list by  map(item)=>{}
+
+![Screenshot (14)](https://user-images.githubusercontent.com/75145283/111870960-f435c480-899c-11eb-8b20-b95174b0820d.png)
+
 
 ![Screenshot (13)](https://user-images.githubusercontent.com/75145283/111783060-0cd7a900-88cf-11eb-93b6-81ae565f2030.png)
 
