@@ -55,22 +55,16 @@ const ss = this.state.showState
             produt=(
                 <div>
                {
-
                this.state.products.map((item)=>{
-
                 return(
-                    <Intro name={item.name} age={item.age} input={this.inputHandler} />
+                  <Intro name={item.name} age={item.age} input={this.inputHandler}/>
                 )
-
                })
-
                }
                 </div>
-    
-
             )
         }
-
+//morteza roozbehi 
 
 
 
