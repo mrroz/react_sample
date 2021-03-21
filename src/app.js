@@ -6,9 +6,9 @@ import './app.css'
 class App extends React.Component{
     state={
         products:[
-            {name :"alics" , age:5},
-            {name :"mori" , age:3},
-            {name :"saeed" , age:2},
+            {id:1,name :"alics" , age:5},
+            {id:2,name :"mori" , age:3},
+            {id:2,name :"saeed" , age:2},
         ],
         showState:false
     }
@@ -42,9 +42,26 @@ class App extends React.Component{
 const ss = this.state.showState
   this.setState({
       showState: !ss,
-  })
-  console.log('klicc')
-    }
+  })}
+
+  deleteItemHandler=(index)=>{
+      const products = [...this.state.products]
+      products.splice(index,1)
+      this.setState({
+        products: products   
+     })
+  }
+
+
+
+//   deleteItemHandler=(index)=>{
+//     const prducts = this.state.products
+//     prducts.splice(index,1)
+//     this.setState({
+//         products:prducts
+//     })
+//   }
+
 
    
 
@@ -55,9 +72,15 @@ const ss = this.state.showState
             produt=(
                 <div>
                {
-               this.state.products.map((item)=>{
+               this.state.products.map((item,index)=>{
                 return(
-                  <Intro name={item.name} age={item.age} input={this.inputHandler}/>
+                  <Intro 
+                  key={item.id}
+                  index={index}
+                  name={item.name} 
+                  age={item.age}
+                  delete={()=>this.deleteItemHandler(index)}
+                  input={this.inputHandler}/>
                 )
                })
                }

@@ -4,8 +4,10 @@ const intro = (props) => {
 return(
     <div className="intro">
 
-         <p>welcome {props.name}</p> 
-         <p onClick={props.click}>welcome {props.age}</p> 
+         <p onClick={props.delete}>welcome {props.name} </p> 
+         <p onClick={props.delete}>number:{ props.index}</p> 
+         <p>welcome {props.age} </p> 
+
          <input type="text" className="sing" onChange={props.input}/>
          </div>
 )
